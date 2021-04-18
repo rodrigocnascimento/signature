@@ -1,48 +1,49 @@
 {
-    "name": "guilhermesteves",
-    "version": "1.2.0",
-    "description": "Cartão Pessoal do Guilherme Esteves (@guilhermesteves). Esse projeto foi baseado no repo do Tierney Cyren (@bitandbang)",
-    "main": "index.js",
-    "bin": {
-        "guilhermesteves": "./bin/card.js"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "lint": "eslint --ext .js bin --fix"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/guilhermesteves/guilhermesteves.git"
-    },
-    "author": "Guilherme Esteves <eu@guilhermesteves.dev> (guilhermesteves.dev/)",
-    "bugs": {
-        "url": "https://github.com/guilhermesteves/guilhermesteves/issues"
-    },
-    "homepage": "https://github.com/guilhermesteves/guilhermestevese#readme",
-    "license": "MIT",
-    "dependencies": {
-        "boxen": "^4.2.0",
-        "chalk": "^4.1.0",
-        "commander": "^6.1.0",
-        "prettier": "^2.1.2"
-    },
-    "devDependencies": {
-        "eslint": "^7.11.0",
-        "eslint-config-airbnb-base": "^14.2.0",
-        "eslint-config-standard": "^14.1.1",
-        "eslint-plugin-import": "^2.22.1",
-        "husky": "^4.3.0",
-        "lint-staged": "^10.4.1",
-        "standard": "^14.3.4"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "*.js": [
-            "prettier --write"
-        ]
+  "name": "rodrigocnascimento",
+  "version": "0.0.1",
+  "description": "Cartão Pessoal do Rodrigo Nascimento (@rodrigocnascimento). Esse projeto foi baseado no repo do Guilherme Esteves (@guilhermesteves)",
+  "main": "bin/signature.js",
+  "bin": {
+    "rodrigocnascimento": "./bin/signature.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .js bin --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodrigocnascimento/signature.git"
+  },
+  "author": "Guilherme Esteves <hello@rodrigo.wtf> (rodrigo.wtf/)",
+  "bugs": {
+    "url": "https://github.com/rodrigocnascimento/signature/issues"
+  },
+  "homepage": "https://github.com/rodrigocnascimento/signature#readme",
+  "license": "MIT",
+  "dependencies": {
+    "boxen": "^4.2.0",
+    "chalk": "^4.1.0",
+    "commander": "^6.1.0",
+    "prettier": "^2.1.2",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.1",
+    "standard": "^14.3.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ]
+  }
 }
