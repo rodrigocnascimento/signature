@@ -5,25 +5,17 @@
 ![Issues](https://img.shields.io/github/issues/guilhermesteves/guilhermesteves.svg)
 ![PullRequests](https://img.shields.io/github/issues-pr/guilhermesteves/guilhermesteves.svg)
 
-# Cartão pessoal no NPX - Guilherme Esteves
+# Assinatura - Rodrigo Nascimento
 
 <p align="center">
   <img src="https://files.guilhermeesteves.com/images/guilhermesteves-card.png"/>  
 </p>
 
-Desenvolvimento de um package que simula um cartão pessoal. O exemplo foi baseado 
-no repo do **[Tierney Cyren](https://twitter.com/bitandbang)**
+Package que cria uma assinatura para ser exibida no terminal como um cartão pessoal. O exemplo foi baseado no repo do **[Guilherme Esteves](https://twitter.com/guilhermesteves)**
 
-Esse projeto ncontra-se disponível no site do **npm** pelo link: **[guilhermesteves](https://www.npmjs.com/package/guilhermesteves)**
+Esse projeto encontra-se disponível no site do **npm** pelo link: **\*[rodrigocnascimento](https://www.npmjs.com/~rodrigocnascimento)\*\*\*\***
 
-### Executando direto com o npx
-
-O **npx** projeto que te permite rodar pacotes direto na linha de comando sem a necessidade de instalá-los.
-
-```bash
-    npx guilhermesteves
-```
-
+### Execute com o npx
 
 Caso você não tenha o **npx**, basta instalar globalmente:
 
@@ -31,16 +23,14 @@ Caso você não tenha o **npx**, basta instalar globalmente:
     npm install -g npx
 ```
 
-### Instalando e rodando via NPM global 
-
-Instalando globalmente:
+O **npx** é uma ferramenta que te permite rodar pacotes direto na linha de comando sem a necessidade de instalá-los.
 
 ```bash
-    npm install -g guilhermesteves
+    npx rodrigocnascimento
 ```
 
-e rodando direto no bash:
+Para mais:
 
 ```bash
-    guilhermesteves
+    npx rodrigocnascimento --help
 ```
