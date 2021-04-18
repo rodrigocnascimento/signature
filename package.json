@@ -1,6 +1,6 @@
 {
   "name": "rodrigocnascimento",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Cartão Pessoal do Rodrigo Nascimento (@rodrigocnascimento). Esse projeto foi baseado no repo do Guilherme Esteves (@guilhermesteves)",
   "main": "bin/signature.js",
   "bin": {
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "https://github.com/rodrigocnascimento/signature.git"
   },
-  "author": "Guilherme Esteves <hello@rodrigo.wtf> (rodrigo.wtf/)",
+  "author": "Rodrigo Nascimento <hello@rodrigo.world> (http://rodrigo.world/)",
   "bugs": {
     "url": "https://github.com/rodrigocnascimento/signature/issues"
   },
