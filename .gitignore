@@ -34,3 +34,5 @@ package-lock.json
 
 *.sample
 /coverage
+
+tags

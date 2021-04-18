@@ -2,7 +2,6 @@
   "extends": "standard",
   "rules": {
     "camelcase": "off",
-    "space-before-function-paren": "off",
     "import/no-extraneous-dependencies": ["warn", {"devDependencies": ["./**/*.spec.js", "./**/gulpfile.js"]}],
     "import/no-dynamic-require": "off",
     "indent": ["error", 2, { "MemberExpression": 0, "SwitchCase": 1 }],
