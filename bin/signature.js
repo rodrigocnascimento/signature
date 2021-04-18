@@ -141,7 +141,6 @@ function main(args) {
     borderColor: '#005792',
     backgroundColor: 'black',
   }
-  console.log(args, args.n, typeof args.v)
 
   let signature = signatureOutput()
 
