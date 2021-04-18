@@ -1,6 +1,6 @@
 {
   "name": "rodrigocnascimento",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Cartão Pessoal do Rodrigo Nascimento (@rodrigocnascimento). Esse projeto foi baseado no repo do Guilherme Esteves (@guilhermesteves)",
   "main": "bin/signature.js",
   "bin": {
