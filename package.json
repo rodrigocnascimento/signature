@@ -1,10 +1,10 @@
 {
   "name": "rodrigocnascimento",
-  "version": "1.0.0",
+  "version": "2.0",
   "description": "Cartão Pessoal do Rodrigo Nascimento (@rodrigocnascimento). Esse projeto foi baseado no repo do Guilherme Esteves (@guilhermesteves)",
-  "main": "bin/signature.js",
+  "main": "main.js",
   "bin": {
-    "rodrigocnascimento": "./bin/signature.js"
+    "rodrigocnascimento": "./main.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,7 +23,6 @@
   "dependencies": {
     "boxen": "^4.2.0",
     "chalk": "^4.1.0",
-    "commander": "^6.1.0",
     "prettier": "^2.1.2",
     "yargs": "^16.2.0"
   },

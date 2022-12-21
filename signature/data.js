@@ -1,12 +1,10 @@
-#!/usr/bin/env node
-
 const chalk = require('chalk')
-const boxen = require('boxen')
-const yargs = require('yargs')
+
+const { promptAsync, defaultBoardSign } = require('./utils')
 
 const newline = '\n'
 
-function signatureOutput() {
+function welcome() {
   const data = {
     head: {
       key: chalk.white('         Rodrigo Nascimento | hello@rodrigo.world'),
@@ -117,14 +115,14 @@ function random() {
   const randomFacts = [
     'Eu quebrei o braço uma vez, uma fratura exposta. Não senti dor nenhuma.',
     'Aprendi a tocar violão, baixo e guitarra sozinho.',
-    'Tive uma banda no ensino médio. Se chamava: "No Control"',
+    'Toquei em uma banda no ensino médio. Se chamava: "No Control"',
     "Já atuei em uma piloto para uma série de TV, que, ainda bem nunca foi ao ar ><'",
-    'Eu gostava de pescar, mas hoje sinto pena dos peixinhos. Vou aprender a mergulhar',
+    'Eu gostava de pescar, mas hoje sinto pena dos peixinhos. Vou aprender a mergulhar!',
     'Tenho um sonho de pular de paraquedas.',
-    'Já fui escoteiro',
-    'Já fui da equipe de pentatlo do Colégio',
+    'Já fui escoteiro.',
+    'Já fui da equipe de pentatlo do Colégio Militar.',
     'Sempre quis ser canhoto.',
-    'Tenho mais de 10 tatuagens',
+    'Tenho mais de 10 tatuagens.',
   ]
 
   const randomFact = Math.floor(Math.random() * randomFacts.length)
@@ -132,63 +130,64 @@ function random() {
   return `Random Fact #${randomFact}: ${randomFacts[randomFact]}`
 }
 
-function main(args) {
-  const chalkOptions = {
-    padding: 3,
-    margin: 3,
-    borderStyle: 'double',
-    float: 'center',
-    borderColor: '#005792',
-    backgroundColor: 'black',
+async function work(workPlaceIdx) {
+  const workPlace = {
+    1: 'Uma experiência muito interessante, onde tive a oportunidade de trabalhar\nno meu primeiro projeto internacional.\nEm um TMS que monitorava em tempo real milhares de entregas pela Europa e todo o\nmundo, além de várias ferramentas para o segmento de logística.\n\nStack: AWS, Docker, SQS, Coffescript (@.@) + NodeJS, PostgreSQL, Kubernetes',
+    2: 'Uma plataforma de terapia online, que se tornou referência no Brasil todo no segmento.\nTrabalhei em uma plataforma de gestão de saúde mental para empresas. \n\nStack: NodeJS Typescript, NestJS, MongoDB, PostgreSQL, Scrum e processos ágeis.',
+    3: 'Atuei como Gerente de Engenharia, na gestão de toda a plataforma do negócio.\nImplementando recursos de monitoração e alarmes na API de transaçoẽs com Cloudwatch,\ngeração de arquivos para o processamento das adquirentes e pagamento dos clientes,\nsuporte das máquinas de cartão POS s920 e mPOS D180, implementando novas features e melhorias.\n\nStack: AWS, Java, Go, MySQL, MongoDb, Oracle, NodeJS e Processamento de arquivos em lote.',
+    4: 'Inicialmente entrei como desenvolvedor Fullstack, mas com o tempo fui absorvendo\noutras atividades e passei a atuar na gestão estratégica do negócio.\nEra responsável por trazer a visão aos times de desenvolvimento as integrações\ncom parceiros, discutindo desde de negócio com stakeholdes, a arquitetura com os desenvolvedores.',
+    5: 'Trabalhei no desenvolvimento de uma plataforma de Intranet para a Polícia Científica no Estado São Paulo.\nUma plataforma com recursos de gestão usados pela instituição como frotas de veículos,\ncontrole de impressão, usando sistema de LDAP já existente e um sistema de\ngestão eletrônica de documentos, permitindo com que os mesmos fossem assinados\nde acordo com a hierarquia do usuário na instituição.',
   }
 
-  let signature = signatureOutput()
+  let userInput
 
-  if (args.a || args.about) {
-    signature = about()
+  if (!workPlaceIdx) {
+    userInput = await promptAsync(
+      defaultBoardSign(
+        '⭐ Experiência ⭐ \
+      \n #1 Supply Stack \
+      \n #2 Zenklub \
+      \n #3 StarPay \
+      \n #4 BLU365\
+      \n #5 Polícia Científica do Estado de São Paulo\n\n Selecione um número (1..5)'
+      )
+    )
   }
 
-  if (args.r || args.random) {
-    signature = random()
-  }
-  /**
-   * Os dois casos abaixo é para sobrescrever o comportamento
-   * default que exibe apenas o helper e a versão é do pacote npm
-   */
-  if (typeof args.v !== 'undefined' || typeof args.version !== 'undefined') {
-    signature = version()
-  }
+  console.log(
+    defaultBoardSign(
+      workPlace[userInput || workPlaceIdx] || 'Option not found',
+      {
+        margin: 0,
+      }
+    )
+  )
 
-  if (typeof args.h !== 'undefined' || typeof args.help !== 'undefined') {
-    yargs.showHelp()
-    return
-  }
+  const retryOrExit = await promptAsync(
+    defaultBoardSign('Selecione um número (1..5) ou Enter para sair', {
+      padding: 1,
+    })
+  )
 
-  console.log(chalk.green(boxen(signature, chalkOptions)))
+  if (retryOrExit) {
+    work(retryOrExit)
+  } else {
+    console.log(
+      defaultBoardSign(
+        'Se quiser saber mais acesse http://rodrigo.world/ \nObrigado :)',
+        {
+          padding: 1,
+          borderStyle: 'single',
+        }
+      )
+    )
+  }
 }
 
-yargs.updateStrings({
-  'Show help': 'Exibe as opções de do cli',
-  'Show version number': 'Exibe a versão do cli',
-})
-
-const args = yargs.options({
-  h: {
-    alias: 'help',
-    type: 'string',
-  },
-  v: {
-    alias: 'version',
-    type: 'string',
-  },
-  a: {
-    alias: 'about',
-    describe: 'Um pouco sobre o Rodrigo',
-  },
-  r: {
-    alias: 'random',
-    describe: 'Coisas aleatórias sobre o Rodrigo',
-  },
-}).argv
-
-main(args)
+module.exports = {
+  welcome,
+  about,
+  version,
+  random,
+  work,
+}
