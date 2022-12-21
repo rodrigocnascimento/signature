@@ -27,3 +27,10 @@ Para mais
 ```bash
     npx rodrigocnascimento --help
 ```
+
+Changelog:
+
+- v2
+  - Adicionados lugares onde já trabalhei;
+  - Implementado um joguinho :3 básico;
+  - Organização da estrutura do código
