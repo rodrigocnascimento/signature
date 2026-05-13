@@ -28,9 +28,17 @@ Para mais
     npx rodrigocnascimento --help
 ```
 
+### Jogos disponíveis
+
+- **Jo Ken Po** (`--game` ou `-g`): O clássico Pedra, Papel e Tesoura no terminal
+- **Sky Shooter** (`--plane` ou `-p`): Controle um avião e derrote os inimigos que descem do céu!
+
 Changelog:
 
 - v2
   - Adicionados lugares onde já trabalhei;
   - Implementado um joguinho :3 básico;
   - Organização da estrutura do código
+- v2.1
+  - Atualizado domínio para rodrigo.is-a.dev;
+  - Adicionado jogo Sky Shooter (avião shoot 'em up);
