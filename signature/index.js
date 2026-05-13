@@ -1,5 +1,6 @@
 const { welcome, about, version, random, work } = require('./data')
 const game = require('./game')
+const planeGame = require('./plane-game')
 
 async function signature(args) {
   let signature = welcome()
@@ -18,6 +19,10 @@ async function signature(args) {
 
   if (args.g || args.game) {
     signature = await game()
+  }
+
+  if (args.p || args.plane) {
+    signature = await planeGame()
   }
 
   /**

@@ -44,6 +44,10 @@ const args = yargs.options({
     alias: 'game',
     describe: 'Fun & Games',
   },
+  p: {
+    alias: 'plane',
+    describe: 'Sky Shooter - Jogo de avião',
+  },
 }).argv
 
 main(args)

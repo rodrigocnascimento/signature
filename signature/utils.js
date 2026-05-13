@@ -3,23 +3,23 @@ const boxen = require('boxen')
 const readline = require('readline')
 
 function defaultBoardSign(text, newOpts = {}) {
-  if (text)
-    return chalk.green(
-      boxen(
-        text,
-        Object.assign(
-          {
-            padding: 3,
-            margin: 3,
-            borderStyle: 'double',
-            float: 'center',
-            borderColor: '#005792',
-            backgroundColor: 'black',
-          },
-          newOpts
-        )
+  if (!text) return ''
+  return chalk.green(
+    boxen(
+      text,
+      Object.assign(
+        {
+          padding: 3,
+          margin: 3,
+          borderStyle: 'double',
+          float: 'center',
+          borderColor: '#005792',
+          backgroundColor: 'black',
+        },
+        newOpts
       )
     )
+  )
 }
 
 function promptAsync(question) {
