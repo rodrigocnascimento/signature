@@ -132,11 +132,12 @@ function random() {
 
 async function work(workPlaceIdx) {
   const workPlace = {
-    1: 'Uma experiência muito interessante, onde tive a oportunidade de trabalhar\nno meu primeiro projeto internacional.\nEm um TMS que monitorava em tempo real milhares de entregas pela Europa e todo o\nmundo, além de várias ferramentas para o segmento de logística.\n\nStack: AWS, Docker, SQS, Coffescript (@.@) + NodeJS, PostgreSQL, Kubernetes',
-    2: 'Uma plataforma de terapia online, que se tornou referência no Brasil todo no segmento.\nTrabalhei em uma plataforma de gestão de saúde mental para empresas. \n\nStack: NodeJS Typescript, NestJS, MongoDB, PostgreSQL, Scrum e processos ágeis.',
-    3: 'Atuei como Gerente de Engenharia, na gestão de toda a plataforma do negócio.\nImplementando recursos de monitoração e alarmes na API de transaçoẽs com Cloudwatch,\ngeração de arquivos para o processamento das adquirentes e pagamento dos clientes,\nsuporte das máquinas de cartão POS s920 e mPOS D180, implementando novas features e melhorias.\n\nStack: AWS, Java, Go, MySQL, MongoDb, Oracle, NodeJS e Processamento de arquivos em lote.',
-    4: 'Inicialmente entrei como desenvolvedor Fullstack, mas com o tempo fui absorvendo\noutras atividades e passei a atuar na gestão estratégica do negócio.\nEra responsável por trazer a visão aos times de desenvolvimento as integrações\ncom parceiros, discutindo desde de negócio com stakeholdes, a arquitetura com os desenvolvedores.',
-    5: 'Trabalhei no desenvolvimento de uma plataforma de Intranet para a Polícia Científica no Estado São Paulo.\nUma plataforma com recursos de gestão usados pela instituição como frotas de veículos,\ncontrole de impressão, usando sistema de LDAP já existente e um sistema de\ngestão eletrônica de documentos, permitindo com que os mesmos fossem assinados\nde acordo com a hierarquia do usuário na instituição.',
+    1: 'Afya - Software Engineer (abr/2023 - atual)\n\nAtuação estratégica com forte foco em Developer Experience (DX), qualidade de\nsoftware e evolução de sistemas críticos para o negócio, utilizando TypeScript.\n\nDeveloper Experience (DX) e Tooling: Engenharia e desenvolvimento de ferramentas\ninternas para otimizar o fluxo de trabalho dos times, incluindo sql-sage e glab-afya-cli.\n\nInovação e Produtividade com IA: Utilização diária de ferramentas e assistentes\nbasados em Inteligência Artificial para acelerar o desenvolvimento e otimizar refatorações.\n\nSistemas Críticos e Legados: Revitalização de arquiteturas legadas e\ndesenvolvimento de integrações financeiras críticas para a operação.\n\nLiderança Técnica e Mentoria: Mentorias para devs menos experientes e\nseminários internos sobre qualidade de código e padronização com ESLint.\n\nStack: Node.js, TypeScript, CI/CD, Docker, PostgreSQL, AWS',
+    2: 'Visual Nuts - Software Engineer (abr/2022 - out/2022)\n\nAtuação alocada no cliente Transporeon (Bélgica), desenvolvendo soluções de\nlogística em colaboração com um time global (Antuérpia, Croácia, Índia e Rússia).\n\nAlgoritmos de Roteirização: Desenvolvimento e otimização de algoritmos de\ncálculo de rotas, garantindo alta eficiência e redução de custos operacionais.\n\nSistemas de Rastreamento: Engenharia de sistemas de tracking de cargas,\ngerenciando desde fretes simples até logística de materiais químicos perigosos.\n\nCompliance: Implementação de lógicas baseadas em legislações europeias de\nfaturamento e diretrizes globais de transporte.\n\nStack: Node.js, PostgreSQL, Docker, AWS',
+    3: 'Zenklub - Backend Developer (mai/2021 - mar/2022)\n\nAtuação direta no core de engenharia de um dos maiores portais de Saúde Mental\ndo Brasil, desenvolvendo soluções de backend focadas em alta disponibilidade.\n\nMódulos de Análise de Perfil: Features complexas para análise e mapeamento\nde perfil de usuários, otimizando a jornada no app.\n\nArquitetura: Aplicação rigorosa de Clean Architecture com NestJS e TypeScript,\ngarantindo código desacoplado, testável e escalável.\n\nPerformance: Modelagem e otimização de rotinas em PostgreSQL, garantindo\nintegridade e velocidade no processamento das informações.\n\nStack: Node.js, TypeScript, NestJS, MongoDB, PostgreSQL, Docker, CI/CD',
+    4: 'StarPay - Engineering Manager (jun/2019 - mai/2020)\n\nEmpresa de meios de pagamentos focada em prestadores de serviços e varejo.\n\nGestão de toda a plataforma do negócio, implementando monitoração e alarmes\nna API de transações com Cloudwatch, geração de arquivos para processamento\ndas adquirentes e pagamento dos clientes.\n\nEngenharia de sistemas para pagamentos utilizando POS s920 e mPOS D180,\nintegração com ambientes seguros de administradoras e processadoras de transações.\n\nLiderança técnica e coordenação de times de desenvolvimento.\n\nStack: AWS, Java, Go, MySQL, MongoDB, Oracle, NodeJS, Processamento de arquivos em lote',
+    5: 'BLU365 - Full Stack Engineer / Head Of Support (out/2017 - mai/2019)\n\nPlataforma de negociação de dívidas as a Service.\n\nFull Stack Engineer: Desenvolvimento com ReactJS, NodeJS, Docker, MySQL e\nAWS (S3, Elastic Search).\n\nHead Of Support: Gestão, planejamento e desenvolvimento da plataforma com\nWordpress, PHP e MySQL. Planejamento de integrações com credores parceiros\njunto com time multidisciplinar (Big Data, Backend e Frontend).\n\nEstruturação de time operacional, criação de processos e ferramentas\npara controle e acompanhamento da operação.\n\nStack: ReactJS, NodeJS, PHP, MySQL, Docker, AWS',
+    6: 'Polícia Científica do Estado de São Paulo\n\nDesenvolvimento de uma plataforma de Intranet com recursos de gestão\nusados pela instituição como frotas de veículos, controle de impressão,\nusando sistema de LDAP e gestão eletrônica de documentos com assinatura\ndigital de acordo com a hierarquia do usuário.',
   }
 
   let userInput
@@ -145,11 +146,12 @@ async function work(workPlaceIdx) {
     userInput = await promptAsync(
       defaultBoardSign(
         '⭐ Experiência ⭐ \
-      \n #1 Supply Stack \
-      \n #2 Zenklub \
-      \n #3 StarPay \
-      \n #4 BLU365\
-      \n #5 Polícia Científica do Estado de São Paulo\n\n Selecione um número (1..5)'
+      \n #1 Afya \
+      \n #2 Visual Nuts \
+      \n #3 Zenklub \
+      \n #4 StarPay \
+      \n #5 BLU365\
+      \n #6 Polícia Científica do Estado de São Paulo\n\n Selecione um número (1..6)'
       )
     )
   }
@@ -164,7 +166,7 @@ async function work(workPlaceIdx) {
   )
 
   const retryOrExit = await promptAsync(
-    defaultBoardSign('Selecione um número (1..5) ou Enter para sair', {
+    defaultBoardSign('Selecione um número (1..6) ou Enter para sair', {
       padding: 1,
     })
   )
