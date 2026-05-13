@@ -98,7 +98,7 @@ module.exports = async function game(weaponIdx) {
   } else {
     console.log(
       defaultBoardSign(
-        'Se quiser saber mais acesse http://rodrigo.world/ \nObrigado :)',
+        'Se quiser saber mais acesse http://rodrigo.is-a.dev/ \nObrigado :)',
         {
           padding: 1,
           borderStyle: 'single',

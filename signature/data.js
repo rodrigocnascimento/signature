@@ -7,7 +7,7 @@ const newline = '\n'
 function welcome() {
   const data = {
     head: {
-      key: chalk.white('         Rodrigo Nascimento | hello@rodrigo.world'),
+      key: chalk.white('         Rodrigo Nascimento | hello@rodrigo.is-a.dev'),
       value: chalk.rgb(0, 172, 238).bold(''),
     },
     work: {
@@ -18,7 +18,7 @@ function welcome() {
     },
     web: {
       key: chalk.rgb(0, 87, 146).bold('       Web:'),
-      value: chalk.white('https://rodrigo.world/'),
+      value: chalk.white('https://rodrigo.is-a.dev/'),
     },
     twitter: {
       key: chalk.rgb(0, 172, 238).bold('   Twitter:'),
@@ -174,7 +174,7 @@ async function work(workPlaceIdx) {
   } else {
     console.log(
       defaultBoardSign(
-        'Se quiser saber mais acesse http://rodrigo.world/ \nObrigado :)',
+        'Se quiser saber mais acesse http://rodrigo.is-a.dev/ \nObrigado :)',
         {
           padding: 1,
           borderStyle: 'single',
