@@ -7,14 +7,12 @@ const newline = '\n'
 function welcome() {
   const data = {
     head: {
-      key: chalk.white('         Rodrigo Nascimento | hello@rodrigo.is-a.dev'),
+      key: chalk.white('         Rodrigo Nascimento | rodrigoc@pm.me'),
       value: chalk.rgb(0, 172, 238).bold(''),
     },
     work: {
       key: chalk.rgb(0, 188, 158).bold('      Work:'),
-      value: chalk.white(
-        'Experienced Software Engineer looking for new opportunities'
-      ),
+      value: chalk.white('Software Engineer helping people and moving forward'),
     },
     web: {
       key: chalk.rgb(0, 87, 146).bold('       Web:'),
