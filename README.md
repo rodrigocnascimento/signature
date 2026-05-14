@@ -4,7 +4,7 @@
   <img src="static/card.png"/>  
 </p>
 
-Package que cria uma assinatura para ser exibida no terminal como um cartão pessoal. O exemplo foi baseado no repo do **[Guilherme Esteves](https://twitter.com/guilhermesteves)**
+Package que cria uma assinatura para ser exibida no terminal como um cartão pessoal. O exemplo foi baseado no repo da **Laura Esteves**
 
 Esse projeto encontra-se disponível no site do **npm** pelo link: [rodrigocnascimento](https://www.npmjs.com/package/rodrigocnascimento)
 
